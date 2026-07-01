@@ -17,7 +17,7 @@ import com.moneymind.ai.data.local.entity.UserPreferencesEntity
 @Database(
     entities = [UserPreferencesEntity::class],
     version = 1,
-    exportSchema = true
+    exportSchema = false
 )
 abstract class AppDatabase : RoomDatabase() {
     abstract fun userPreferencesDao(): UserPreferencesDao
