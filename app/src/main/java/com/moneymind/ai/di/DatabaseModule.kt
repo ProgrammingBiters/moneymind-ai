@@ -49,7 +49,7 @@ object DatabaseModule {
 
         return Room.databaseBuilder(context, AppDatabase::class.java, AppDatabase.DATABASE_NAME)
             .openHelperFactory(factory)
-            .fallbackToDestructiveMigration(false)
+.fallbackToDestructiveMigration()
             .build()
     }
 
