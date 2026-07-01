@@ -22,6 +22,7 @@ import androidx.compose.ui.unit.dp
  * Module 2 replaces this with the real dashboard (balances, graphs, AI
  * insights) described in the product spec.
  */
+@OptIn(androidx.compose.material3.ExperimentalMaterial3Api::class)
 @Composable
 fun HomeScreen() {
     Scaffold(
