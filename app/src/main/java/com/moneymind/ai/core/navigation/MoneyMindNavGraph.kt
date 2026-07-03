@@ -23,6 +23,7 @@ import com.moneymind.ai.presentation.portfolio.AddLiabilityScreen
 import com.moneymind.ai.presentation.portfolio.LiabilityDetailScreen
 import com.moneymind.ai.presentation.portfolio.PortfolioScreen
 import com.moneymind.ai.presentation.reports.ReportsScreen
+import com.moneymind.ai.presentation.smsimport.SmsImportScreen
 import com.moneymind.ai.presentation.business.AddClientScreen
 import com.moneymind.ai.presentation.business.AddInvoiceScreen
 import com.moneymind.ai.presentation.business.BusinessScreen
@@ -157,6 +158,10 @@ fun MoneyMindNavGraph(navController: NavHostController = rememberNavController()
 
         composable(Screen.Reports.route) {
             ReportsScreen(onBack = { navController.popBackStack() })
+        }
+
+        composable(Screen.SmsImport.route) {
+            SmsImportScreen(onBack = { navController.popBackStack() })
         }
 
         composable(Screen.Business.route) {

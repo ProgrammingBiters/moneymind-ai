@@ -9,6 +9,7 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Assessment
+import androidx.compose.material.icons.filled.Sms
 import androidx.compose.material.icons.filled.SwapHoriz
 import androidx.compose.material3.Card
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -66,6 +67,9 @@ fun DashboardScreen(
             TopAppBar(
                 title = { Text("MoneyMind AI") },
                 actions = {
+                    IconButton(onClick = { navController.navigate(Screen.SmsImport.route) }) {
+                        Icon(imageVector = Icons.Filled.Sms, contentDescription = "Import from SMS")
+                    }
                     IconButton(onClick = { navController.navigate(Screen.Reports.route) }) {
                         Icon(imageVector = Icons.Filled.Assessment, contentDescription = "Reports")
                     }
